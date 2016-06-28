@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+    <link type="text/css" rel="stylesheet" href="~/Content/materialize/css/materialize.min.css" media="screen,projection" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title- Chat Hash</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav>
+    <div class="nav-wrapper teal lighten-2">
+        @Html.ActionLink("Chat Hash", "Index", "Home", null, new { @class = "brand-logo" })
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Chat", "Chat", "Home")</li>
+            <li>@Html.ActionLink("Register", "Register", "Home")</li>
+            <li>@Html.ActionLink("Login", "Login", "Home")</li>
+
+
+        </ul>
+    </div>
+    </nav>
+   
+            <div class="container body-content">
+                @RenderBody()
+               
+               
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+            
+            <script type="text/javascript" src="~/Scripts/materialize/materialize.min.js"/></script>
+
+
+</body>
+</html>
